@@ -172,12 +172,12 @@ h6 {
 --------------------------------------------------------------*/
 
 #intro {
-  height: 700px;
+  height: 600px;
   /*width:1300px;*/
   position: relative;
   background: url("../img/intro-bg.jpg") center bottom no-repeat;
   background-size: cover;
-  padding: 200px 0 120px 0;
+  padding: 0 0 120px 0;
 }
 
 #intro .intro-img {
@@ -1460,3 +1460,107 @@ margin-bottom: 40px;;;
 .gsoc{
   font-size: 17px;
 }
+
+
+/* responsive background */
+
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #111;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.demo .large-header {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+}
+
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #F9F1E9;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.demo .main-title {
+  /* text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em; */
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.main-title .thin {
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+  .demo .main-title {
+     font-size: 3em;
+  }
+}
+
+
+/* end of responsive background */
+
+/* Gallery */
+
+.carousel{
+  background: #2f4357;
+  margin-top: 20px;
+}
+.carousel-item{
+  text-align: center;
+  min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.bs-example{
+margin: 20px;
+}
+
+
+.row {
+display: flex;
+flex-wrap: wrap;
+padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+flex: 25%;
+max-width: 25%;
+padding: 0 4px;
+}
+
+.column img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+.column {
+  flex: 50%;
+  max-width: 50%;
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+  flex: 100%;
+  max-width: 100%;
+}
+}
+
+/* /Gallery */
