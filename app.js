@@ -1,5 +1,9 @@
 var express     = require("express"),
-    app         = express()
+    app         = express(),
+    bodyParser  = require("body-parser"),
+    mongoose    = require("mongoose"),
+    methodOverride = require("method-override"),
+    Message  = require("./models/message")
     // bodyParser  = require("body-parser"),
     // mongoose    = require("mongoose"),
     // flash       = require("connect-flash"),
@@ -11,10 +15,11 @@ var express     = require("express"),
 
 var indexRoutes = require("./routes/index");
 
-// app.use(bodyParser.urlencoded({extended: true}));
+mongoose.connect("mongodb://localhost/ariesv1");
+app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-// app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
 
 app.use("/", indexRoutes);
 
