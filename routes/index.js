@@ -23,11 +23,14 @@ router.post("/submit-form",  function(req, res){
     Message.create(newMessage, function(err, newlyCreated){
         if(err){
             console.log(err);
+            res.redirect("/");
         } else {
             //redirect back to main page
             newlyCreated.save();
             console.log(newlyCreated);
-            res.redirect("/team");
+            req.flash("success", "Message sent!");
+            // console.log("njn")
+            res.redirect("/");
         }
     });
 });

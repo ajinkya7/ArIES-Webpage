@@ -3,6 +3,7 @@ var express     = require("express"),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose"),
     methodOverride = require("method-override"),
+    flash       = require("connect-flash"),
     Message  = require("./models/message")
     // bodyParser  = require("body-parser"),
     // mongoose    = require("mongoose"),
@@ -19,7 +20,24 @@ mongoose.connect("mongodb://localhost/ariesv1");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-app.use(methodOverride("_method"));
+// app.use(methodOverride("_method"));
+app.use(flash());
+
+app.use(require("express-session")({
+    secret: "Once again Rusty wins cutest dog!",
+    resave: false,
+    saveUninitialized: false
+}));
+
+
+
+app.use(function(req, res, next){
+   
+   res.locals.error = req.flash("error");
+   res.locals.success = req.flash("success");
+   next();
+});
+
 
 app.use("/", indexRoutes);
 
