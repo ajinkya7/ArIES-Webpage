@@ -24,7 +24,7 @@ router.post("/submit-form",  function(req, res){
         if(err){
             console.log(err);
         } else {
-            //redirect back to campgrounds page
+            //redirect back to main page
             newlyCreated.save();
             console.log(newlyCreated);
             res.redirect("/team");
