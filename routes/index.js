@@ -18,7 +18,7 @@ router.post("/submit-form",  function(req, res){
     var name = req.body.name;
     var email = req.body.email;
     var subject = req.body.subject;
-    var message = req.body.subject;
+    var message = req.body.message;
     var newMessage = {name: name, email: email, subject: subject, message:message}
     // Create a new message and save to DB
     Message.create(newMessage, function(err, newlyCreated){
