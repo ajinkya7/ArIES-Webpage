@@ -3,6 +3,7 @@ var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
 var Message = require("../models/message");
+var middleware = require("../middleware");
 
 //root route
 router.get("/", function(req, res){
@@ -33,6 +34,31 @@ router.post("/submit-form",  function(req, res){
             res.redirect("/");
         }
     });
+});
+
+
+//show login form
+router.get("/login", function(req, res){
+   res.render("./landing/login"); 
+});
+//show members page
+router.get("/members",middleware.isLoggedIn, function(req, res){
+   Message.find({}, function(err, allMessages){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("./landing/members",{messages:allMessages });
+       }
+    });
+});
+
+//Verify
+//handling login logic
+router.post("/login", passport.authenticate("local", 
+    {
+        successRedirect: "/members",
+        failureRedirect: "back"
+    }), function(req, res){
 });
 
 module.exports = router;

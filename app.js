@@ -4,14 +4,16 @@ var express     = require("express"),
     mongoose    = require("mongoose"),
     methodOverride = require("method-override"),
     flash       = require("connect-flash"),
-    Message  = require("./models/message")
+    Message  = require("./models/message"),
+    passport    = require("passport"),
+    LocalStrategy = require("passport-local"),
     // bodyParser  = require("body-parser"),
     // mongoose    = require("mongoose"),
     // flash       = require("connect-flash"),
     // passport    = require("passport"),
     // LocalStrategy = require("passport-local"),
     // methodOverride = require("method-override"),
-    // User        = require("./models/user"),
+    User        = require("./models/user")
     // Campground  = require("./models/campground")
 
 var indexRoutes = require("./routes/index");
@@ -29,6 +31,12 @@ app.use(require("express-session")({
     saveUninitialized: false
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 
 app.use(function(req, res, next){
@@ -40,6 +48,11 @@ app.use(function(req, res, next){
 
 
 app.use("/", indexRoutes);
+
+
+
+
+
 
 app.listen(3000, function(){
    console.log("The YelpCamp Server Has Started!");
