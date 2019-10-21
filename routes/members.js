@@ -73,7 +73,20 @@ router.post("/inventory", middleware.isLoggedIn, function(req, res){
         }
     });
 });
-
+// SHOW - shows more info about one campground
+router.get("/inventory/:id", middleware.isLoggedIn, function(req, res){
+    //find the campground with provided ID
+    Inventory.findById(req.params.id,function(err, foundInventory){
+        if(err){
+            console.log(err);
+            res.redirect("/members/inventory");
+        } else {
+            console.log(foundInventory)
+            //render show template with that campground
+            res.render("./landing/show", {inventory: foundInventory});
+        }
+    });
+});
 // EDIT Inventory ROUTE
 router.get("/inventory/:id/edit", middleware.isLoggedIn, function(req, res){
     Inventory.findById(req.params.id, function(err, foundInventory){
