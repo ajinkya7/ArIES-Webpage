@@ -175,7 +175,7 @@ h6 {
   height: 600px;
   /*width:1300px;*/
   position: relative;
-  background: url("../img/intro-bg.jpg") center bottom no-repeat;
+  /* background: url("../img/intro-bg.jpg") center bottom no-repeat; */
   background-size: cover;
   padding: 0 0 120px 0;
 }
