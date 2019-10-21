@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
 <head>
   <meta charset="utf-8">
   <title>ArIES</title>
@@ -71,79 +71,37 @@
     </div>
 
 
-  </header><!-- #header -->
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  
+  
 
 
-  <!-- responsive background -->
-<div id = "l-head">
 
-
-   <section id="intro" class="clearfix">
-
-    <div class=" demo">
-
-       <div class="content">
-
-          <div id="large-header" class="large-header">
-
-
-             <canvas id="demo-canvas"></canvas>
-            
-
-                       
-             <div class="container main-title">
-              <div class="container" id="flash-mssg">
-                <% if(error && error.length > 0){ %>
-                  <div class="alert alert-danger" role="alert" style="font-size: 0.2em; text-align: center;">
-                    <%= error %>
-                  </div>
-                <% } %>
-                <% if(success && success.length > 0){ %>
-                  <div class="alert alert-success" role="alert" style="font-size: 0.2em; text-align: center;">
-                    <%= success %>
-                  </div>
-                <% } %>
-              
-            </div>
-
-
-                <!-- <div class="intro-img">
-                  <img src="/index/img/intro-img.jpeg" alt="" class="img-fluid">
-                </div> -->
-          
-                <div class="intro-info container">
-                  <br>
-                  
-                  <div>
-                    <a href="/members/messages" class="btn-services scrollto">Messages</a>
-                    <a href="/members/inventory" class="btn-services scrollto">Inventory</a>
-                    <a href="#" class="btn-services scrollto">Keys</a>
-
-                  </div>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Add a new item</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/members/inventory" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="name">
                 </div>
-          
-              </div>
-            
-             
-             <!-- <h1 class="main-title">Explore Space</h1> -->
-          </div>
-
-       </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="image url">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="quantity" placeholder="quantity">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/members/inventory">Go Back</a>
+        </div>
     </div>
-
-  </section></div>
-
-
-  <script>
-    var width, height, largeHeader, canvas, ctx,target;
-    width = window.innerWidth;
-    height = window.innerHeight;
-    target = {x: width/2, y: height/2};
-
-    largeHeader = document.getElementById('l-head');
-    largeHeader.style.height = height+'px';
-</script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
-        
+</div>

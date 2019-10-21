@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
 <head>
   <meta charset="utf-8">
   <title>ArIES</title>
@@ -62,7 +62,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          
+          <li><a href="/members/inventory/new"><b>Add new item</b></a></li>
           <li><a href="/logout"><b>Logout</b></a></li>
            
         </ul>
@@ -71,79 +71,33 @@
     </div>
 
 
-  </header><!-- #header -->
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  
+  
 
 
-  <!-- responsive background -->
-<div id = "l-head">
-
-
-   <section id="intro" class="clearfix">
-
-    <div class=" demo">
-
-       <div class="content">
-
-          <div id="large-header" class="large-header">
-
-
-             <canvas id="demo-canvas"></canvas>
-            
-
-                       
-             <div class="container main-title">
-              <div class="container" id="flash-mssg">
-                <% if(error && error.length > 0){ %>
-                  <div class="alert alert-danger" role="alert" style="font-size: 0.2em; text-align: center;">
-                    <%= error %>
-                  </div>
-                <% } %>
-                <% if(success && success.length > 0){ %>
-                  <div class="alert alert-success" role="alert" style="font-size: 0.2em; text-align: center;">
-                    <%= success %>
-                  </div>
-                <% } %>
-              
-            </div>
-
-
-                <!-- <div class="intro-img">
-                  <img src="/index/img/intro-img.jpeg" alt="" class="img-fluid">
-                </div> -->
-          
-                <div class="intro-info container">
-                  <br>
-                  
-                  <div>
-                    <a href="/members/messages" class="btn-services scrollto">Messages</a>
-                    <a href="/members/inventory" class="btn-services scrollto">Inventory</a>
-                    <a href="#" class="btn-services scrollto">Keys</a>
-
-                  </div>
+        <% inventory.forEach(function(inventory){ %>
+        <div style=" float:left;padding-left: 60px; border: 2px solid green;      " >
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= inventory.image %>" style="width: 200px; height:200px;">
+                   <div class="caption">
+                       <h4><a href="/members/inventory/<%= inventory._id %>"><%= inventory.name %></a></h4>
+                   </div>
+            <div class="container" >
+            <form id="delete-form" action="/members/inventory/<%= inventory._id %>?_method=DELETE" method="POST">
+                            <button style="float:left;" class="btn btn-xs btn-danger">Delete</button>
+                </form>
+      <button class="btn btn-xs btn-success"><a href="/members/inventory/<%= inventory._id %>/edit">Update</a></button>
+              </div>     
                 </div>
-          
-              </div>
-            
-             
-             <!-- <h1 class="main-title">Explore Space</h1> -->
+            </div>
           </div>
-
-       </div>
-    </div>
-
-  </section></div>
-
-
-  <script>
-    var width, height, largeHeader, canvas, ctx,target;
-    width = window.innerWidth;
-    height = window.innerHeight;
-    target = {x: width/2, y: height/2};
-
-    largeHeader = document.getElementById('l-head');
-    largeHeader.style.height = height+'px';
-</script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
-        
+        <% }); %>
+    
