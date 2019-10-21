@@ -33,6 +33,13 @@ app.use(require("express-session")({
     saveUninitialized: false
 }));
 
+// User.register(newUser, "admin@aries", function(err, user){
+//     if(err){
+//         req.flash("error", err.message);
+//         return res.render("register");
+//       }
+// });
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
