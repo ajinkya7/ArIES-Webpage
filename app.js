@@ -32,7 +32,7 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false
 }));
-
+// var newUser = new User({username: "aries"});
 // User.register(newUser, "admin@aries", function(err, user){
 //     if(err){
 //         req.flash("error", err.message);
