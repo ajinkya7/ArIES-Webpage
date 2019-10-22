@@ -32,8 +32,8 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false
 }));
-// var newUser = new User({username: "aries"});
-// User.register(newUser, "admin@aries", function(err, user){
+// var newUser = new User({username: "kalyanji"});
+// User.register(newUser, "aries123", function(err, user){
 //     if(err){
 //         req.flash("error", err.message);
 //         return res.render("register");
@@ -49,7 +49,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use(function(req, res, next){
-   
+   res.locals.currentUser = req.user;
    res.locals.error = req.flash("error");
    res.locals.success = req.flash("success");
    next();

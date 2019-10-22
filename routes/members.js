@@ -15,7 +15,7 @@ router.get("/",middleware.isLoggedIn, function(req, res){
    
 });
 //show messages
-router.get("/messages",middleware.isLoggedIn, function(req, res){
+router.get("/messages",middleware.isLoggedIn_aries, function(req, res){
    Message.find({}, function(err, allMessages){
        if(err){
            // console.log(err);
@@ -26,7 +26,7 @@ router.get("/messages",middleware.isLoggedIn, function(req, res){
 });
 
 //Delete Messages
-router.delete("/messages/:id",middleware.isLoggedIn, function(req, res){
+router.delete("/messages/:id",middleware.isLoggedIn_aries, function(req, res){
    Message.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/members/messages");
@@ -107,7 +107,7 @@ router.put("/inventory/:id",middleware.isLoggedIn, function(req, res){
     });
 });
 //Delete inventory
-router.delete("/inventory/:id",middleware.isLoggedIn, function(req, res){
+router.delete("/inventory/:id",middleware.isLoggedIn_kalyanji, function(req, res){
    Inventory.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/members/inventory");
@@ -119,12 +119,12 @@ router.delete("/inventory/:id",middleware.isLoggedIn, function(req, res){
 
 
 //show form for addition of takers
-router.get("/inventory/:id/takers/new",middleware.isLoggedIn, function(req, res){
+router.get("/inventory/:id/takers/new",middleware.isLoggedIn_kalyanji, function(req, res){
    res.render("./landing/new_takers", {id: req.params.id});
 });
 
 //Comments Create
-router.post("/inventory/:id",middleware.isLoggedIn,function(req, res){
+router.post("/inventory/:id",middleware.isLoggedIn_kalyanji,function(req, res){
    //lookup campground using ID
    Inventory.findById(req.params.id, function(err, inventory){
        if(err){
@@ -163,7 +163,7 @@ router.post("/inventory/:id",middleware.isLoggedIn,function(req, res){
 
 
 //Delete inventory
-router.delete("/inventory/:id/takers/:id2",middleware.isLoggedIn, function(req, res){
+router.delete("/inventory/:id/takers/:id2",middleware.isLoggedIn_kalyanji, function(req, res){
    Inventory.findById(req.params.id, function(err,inventory){
       if(err){
           res.redirect("/members/inventory/"+ inventory._id);
@@ -176,7 +176,7 @@ router.delete("/inventory/:id/takers/:id2",middleware.isLoggedIn, function(req, 
 });
 
 // EDIT Takers ROUTE
-router.get("/inventory/:id/takers/:id2/edit", middleware.isLoggedIn, function(req, res){
+router.get("/inventory/:id/takers/:id2/edit", middleware.isLoggedIn_kalyanji, function(req, res){
     Inventory.findById(req.params.id, function(err, foundInventory){
         if(err){
           res.redirect("/members/inventory/"+ inventory._id);
@@ -194,7 +194,7 @@ router.get("/inventory/:id/takers/:id2/edit", middleware.isLoggedIn, function(re
 });
 
 // UPDATE Takers ROUTE
-router.put("/inventory/:id/takers/:id2",middleware.isLoggedIn, function(req, res){
+router.put("/inventory/:id/takers/:id2",middleware.isLoggedIn_kalyanji, function(req, res){
     Inventory.findById(req.params.id, function(err, foundInventory){
         if(err){
           res.redirect("/members/inventory/"+ foundInventory._id);
