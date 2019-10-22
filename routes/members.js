@@ -134,6 +134,8 @@ router.post("/inventory/:id",middleware.isLoggedIn_kalyanji,function(req, res){
         	taker = {};
         	taker.enr_no = req.body.enr_no;
         	taker.quantity = req.body.quantity;
+          taker.mobile = req.body.mobile;
+          taker.name = req.body.name;
         	// taker.save();
             inventory.takers.unshift(taker);
             inventory.save(function (err, product, numAffected) {
@@ -203,6 +205,8 @@ router.put("/inventory/:id/takers/:id2",middleware.isLoggedIn_kalyanji, function
       	  	if(taker._id.equals(req.params.id2)){
       	  		taker.enr_no=req.body.enrollment;
       	  		taker.quantity=req.body.quantity;
+              taker.mobile=req.body.mobile;
+              taker.name=req.body.name;
       	  	}
 
 

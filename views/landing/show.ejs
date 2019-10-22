@@ -82,7 +82,7 @@
   <h1 >Name = <%= inventory.name %></h1>
   <h3> Quantity = <%= inventory.quantity %></h3>
   <% inventory.takers.forEach(function(taker){ %>
-      <p style=" float: left; "><%=taker.enr_no%>=<%=taker.quantity%>
+      <p style=" float: left; "><%=taker.enr_no%>=<%=taker.quantity%> <%=taker.name%> <%=taker.mobile%> 
     <button class="btn btn-xs btn-success"><a href="/members/inventory/<%= inventory._id %>/takers/<%= taker._id %>/edit">Update</a></button>
     <form id="delete-form" action="/members/inventory/<%= inventory._id %>/takers/<%= taker._id %>?_method=DELETE" method="POST" >
                             <button class="btn btn-xs btn-danger" >Delete</button> 

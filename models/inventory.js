@@ -7,7 +7,9 @@ var inventorySchema = new mongoose.Schema({
    takers: [
       {
          enr_no: String,
-         quantity: String
+         quantity: String,
+         mobile: String,
+         name: String
       }
    ]
 });
