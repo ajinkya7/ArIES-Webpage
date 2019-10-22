@@ -62,7 +62,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          
+          <li><a href="/members/inventory"><b>Go back</b></a></li>
           <li><a href="/logout"><b>Logout</b></a></li>
            
         </ul>
@@ -82,7 +82,7 @@
   <h1 >Name = <%= inventory.name %></h1>
   <h3> Quantity = <%= inventory.quantity %></h3>
   <% inventory.takers.forEach(function(taker){ %>
-      <p><%=taker.enr_no%>=<%=taker.quantity%>
+      <p style=" float: left; "><%=taker.enr_no%>=<%=taker.quantity%>
     <button class="btn btn-xs btn-success"><a href="/members/inventory/<%= inventory._id %>/takers/<%= taker._id %>/edit">Update</a></button>
     <form id="delete-form" action="/members/inventory/<%= inventory._id %>/takers/<%= taker._id %>?_method=DELETE" method="POST" >
                             <button class="btn btn-xs btn-danger" >Delete</button> 
