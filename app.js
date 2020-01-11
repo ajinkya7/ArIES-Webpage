@@ -32,13 +32,13 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false
 }));
-// var newUser = new User({username: "kalyanji"});
-// User.register(newUser, "aries123", function(err, user){
-//     if(err){
-//         req.flash("error", err.message);
-//         return res.render("register");
-//       }
-// });
+var newUser = new User({username: "kalyanji"});
+User.register(newUser, "aries123", function(req,err, user){
+    if(err){
+        req.flash("error", err.message);
+        return res.render("register");
+      }
+});
 
 app.use(passport.initialize());
 app.use(passport.session());
