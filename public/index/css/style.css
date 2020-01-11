@@ -1610,7 +1610,7 @@ body, html {
 /*---------------------------------------------*/
 a {
 	font-family: OpenSans-Regular;
-	font-size: 14px;
+  font-size: 25px;
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
@@ -1637,7 +1637,7 @@ p {
 	font-family: OpenSans-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: #d3d3d3;
 	margin: 0px;
 }
 
@@ -2004,4 +2004,8 @@ input.input100 {
   padding-right: 55px;
   padding-bottom: 50px;
   padding-left: 55px;
+}
+
+.back-black{
+  background-color: #000000;
 }
