@@ -9,9 +9,12 @@ var middleware = require("../middleware");
 router.get("/", function(req, res){
     res.render("./landing/index");
 });
-router.get("/team", function(req, res){
-    res.render("./landing/team");
-});
+// router.get("/team", function(req, res){
+//     res.render("./landing/team");
+// });
+// router.get("/aeroclub", function(req, res){
+//     res.render("./landing/aeroclub");
+// });
 //CREATE - add new message to DB
 router.post("/submit-form",  function(req, res){
     // get data from form and add to campgrounds array
@@ -68,5 +71,8 @@ router.get("/logout", function(req, res){
    res.redirect("/");
 });
 
+router.get("/aeroclub", function(req, res){
+    res.render("./landing/aeroclub");
+});
 
 module.exports = router;
