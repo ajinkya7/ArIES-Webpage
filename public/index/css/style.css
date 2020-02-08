@@ -171,6 +171,27 @@ h6 {
 # Intro Section
 --------------------------------------------------------------*/
 
+
+
+.a {
+  text-align: justify; /* For Edge */
+  -moz-text-align-last: right; /* For Firefox prior 58.0 */
+  text-align-last: right;
+  position: absolute;
+  top: -150px;
+  right: -300px;
+  font-size: 100px;
+}
+
+
+
+.b {
+  
+  position: absolute;
+  top: -150px;
+  right: -35px;
+  
+}
 #intro {
   height: 600px;
   /*width:1300px;*/
