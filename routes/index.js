@@ -12,6 +12,9 @@ router.get("/", function(req, res){
 router.get("/team", function(req, res){
     res.render("./landing/team");
 });
+router.get("/projects", function(req, res){
+    res.render("./landing/projects");
+});
 //CREATE - add new message to DB
 router.post("/submit-form",  function(req, res){
     // get data from form and add to campgrounds array
