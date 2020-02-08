@@ -239,6 +239,70 @@ h6 {
   color: #fff;
 }
 
+#intro .aero {
+  width: 50%;
+  float: right;
+}
+
+#intro .aero {
+  width: 50%;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 500px;
+}
+
+#intro .aero h2 {
+  color: #fff;
+  /*margin-bottom: 500px;*/
+  font-size: 70px;
+  font-weight: 700;
+}
+
+#intro .aero h2 span {
+  color: #CFFCFE;
+  font-size: 90px;
+  /*text-decoration: underline;*/
+}
+
+
+#intro .aero .btn-get-started,
+#intro .aero .btn-services {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  /*display: inline-block;*/
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  /*margin-top: 100px;*/
+  /*margin: 0 20px 20px 0;*/
+  color: #fff;
+
+
+}
+
+#intro .aero .btn-get-started {
+  background: #007bff;
+  border: 2px solid #007bff;
+  color: #fff;
+}
+
+#intro .aero .btn-get-started:hover {
+  background: none;
+  border-color: #fff;
+  color: #fff;
+}
+
+#intro .aero .btn-services {
+  border: 2px solid #fff;
+}
+
+#intro .aero .btn-services:hover {
+  background: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1491,6 +1555,11 @@ margin-bottom: 40px;;;
 .demo .large-header2 {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
 }
+
+.demo .large-header3 {
+  background-image: url("https://www.itl.cat/pngfile/big/46-466923_parrot-drone-hd-wallpaper-drone-hd.jpg");
+}
+
 
 .main-title {
   position: absolute;
