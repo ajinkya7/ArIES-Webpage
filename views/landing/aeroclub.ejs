@@ -95,7 +95,7 @@
 
                        
              <div class="container main-title">
-              <div class="container" id="flash-mssg">
+              <!-- <div class="container" id="flash-mssg">
                 <% if(error && error.length > 0){ %>
                   <div class="alert alert-danger" role="alert" style="font-size: 0.2em; text-align: center;">
                     <%= error %>
@@ -107,19 +107,20 @@
                   </div>
                 <% } %>
               
-            </div>
+            </div> -->
 
 
                 <!-- <div class="intro-img">
                   <img src="/index/img/intro-img.jpeg" alt="" class="img-fluid">
                 </div> -->
           
-                <div class="intro-info">
+                <div class="intro-info" style="width: 50%;float: left;">
                   <br>
-                  <h2>Welcome to<br><span>ArIES</span></h2>
+                  <h2>Welcome to<br><span>AeroClub</span></h2>
                   <div>
                     <a href="#about" class="btn-get-started scrollto">About Us</a>
                     <a href="#services" class="btn-services scrollto">Our Projects</a>
+                    <img src="/index/img/dronebig.png" class="img-fluid" alt="" >
                   </div>
                 </div>
           
@@ -143,10 +144,13 @@
 
     largeHeader = document.getElementById('l-head');
     largeHeader.style.height = height+'px';
+
+    // centertext = document.getElementById('intro-info');
+    // centertext.style.
 </script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script> -->
+    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script> -->
+    <script src="/index/js/back.js"></script>
   
 
 
@@ -162,103 +166,42 @@
 
         <header class="mb-5">
           <h1 class="a2"><b>About Us</b></h1>
-          <p class="a3">We Inspire to develope the culture of Artificial Intelligence and Electronics In IIT Roorkee. We aim to Innovate existing technology by integrating Artificial Intelligence with Hardware components to create interesting Components.</p>
-        </header>
-
-        <div class="row about-container">
-            <h1 class="a1"><b><centre>What do we do?</centre></b></h1>
-            
-
-          
-          </div>
-          <div class="row about-extra">
+          <p class="a3">We Inspire to develope the culture of Artificial Intelligence and Electronics In IIT Roorkee. We aim to Innovate existing technology by integrating Artificial Intelligence with Hardware components to create interesting Components.
+        <br>
+          A drone, in technological terms, is an 
+          unmanned aircraft. Drones are more formally known as unmanned 
+          aerial vehicles (UAVs) or unmanned aircraft systems (UASes). 
+          Essentially, a drone is a flying robot that can be remotely 
+          controlled or fly autonomously through software-controlled flight 
+          plans in their embedded systems, working in conjunction with onboard 
+          sensors and GPS.<br>In the recent past, UAVs were most often 
+          associated with the military, where they were used initially for
+           anti-aircraft target practice, intelligence gathering and then, 
+           more controversially, as weapons platforms. Drones are now also 
+           used in a wide range of civilian roles ranging from search and 
+           rescue, surveillance, traffic monitoring, weather monitoring and 
+           firefighting, to personal drones and business drone-based 
+           photography, as well as videography, agriculture and even delivery 
+           services.
+          </p>
+          </header>
              
-                <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-          <div class="icon-box wow fadeInUp">
-              <!-- <div class="icon"><i class="fa fa-shopping-bag"></i></div> -->
-              <h3 class="title"><b><br><br><a href="">Artificial Intelligence</a></b></h3>
-              <p class="a3">Artificial intelligence (AI) is the 
-                simulation of human intelligence processes by machines, 
-                especially computer systems. These processes include 
-                learning (the acquisition of information and rules for using the
-                 information), reasoning (using rules to reach approximate or 
-                 definite conclusions) and self-correction.</p> 
-                 <p class ="a3">It is difficult to think of a major industry that AI will not transform. This include healthcare, education, tranportation, retail,
-                   communication, and agriculture. There are surprisingly clear paths for AI to make a big difference in all these industries.
-                   There has never been more requirement of AI as it is today and thats why we try to continously improve and enhance ourselves.  
-                 </p>
-                 <div class="col-lg-6 content order-lg-1 order-2">
-            </div>
 
-          <!-- <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-            <img src="/index/img/aibig.png" class="img-fluid" alt="">
-          </div> -->
-        </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp">
-              <img src="/index/img/aibig.png" class="img-fluid" alt="">
-            </div>
+  
           </div>
 
-        <div class="row about-extra">
-          <div class="col-lg-6 wow fadeInUp">
-            <br><br><br>
-            <img src="/index/img/iotbig.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                <!-- <div class="icon"><i class="fa fa-photo"></i></div> -->
-                <h3 class="title"><a href=""><b>Electronics and IOT</b></a></h3>
-                <p class="a3">Electronics is a subfield within the wider 
-                  electrical engineering academic subject but denotes a broad 
-                  engineering field that covers subfields such as analog electronics,
-                   digital electronics, consumer electronics, embedded systems and 
-                   power electronics. Electronics engineering deals with implementation 
-                   of applications, principles and algorithms developed within many 
-                   related fields.</p>
-            
-                  <p class="a3">The Internet of Things is the concept of 
-                    connecting any device (so long as it has an on/off switch) to the 
-                    Internet and to other connected devices. The IoT is a giant network
-                     of connected things and people – all of which collect and share 
-                     data about the way they are used and about the environment around 
-                     them.</p>
-                </div>
-          </div>
-        </div>
-
-        <div class="row about-extra pt-5"  id="aero">
+        <!-- <div class="row about-extra pt-5"  id="aero">
           <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
             <br><br><br>
             <img src="/index/img/dronebig.png" class="img-fluid" alt="" >
-          </div>
+          </div> -->
 
 
-          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-                  <!-- <div class="icon"><i class="fa fa-bar-chart"></i></div> -->
-                  <h3 class="title"><a href=""><b>Drones</b></a></h3>
-                  <p class="a3">A drone, in technological terms, is an 
-                    unmanned aircraft. Drones are more formally known as unmanned 
-                    aerial vehicles (UAVs) or unmanned aircraft systems (UASes). 
-                    Essentially, a drone is a flying robot that can be remotely 
-                    controlled or fly autonomously through software-controlled flight 
-                    plans in their embedded systems, working in conjunction with onboard 
-                    sensors and GPS.<br>In the recent past, UAVs were most often 
-                    associated with the military, where they were used initially for
-                     anti-aircraft target practice, intelligence gathering and then, 
-                     more controversially, as weapons platforms. Drones are now also 
-                     used in a wide range of civilian roles ranging from search and 
-                     rescue, surveillance, traffic monitoring, weather monitoring and 
-                     firefighting, to personal drones and business drone-based 
-                     photography, as well as videography, agriculture and even delivery 
-                     services.</p>
-                </div>
-          </div>
+          
           
         </div>
 
-      </div>
+      <!-- </div> -->
     </section><!-- #about -->
 
     <!--==========================
