@@ -12,12 +12,9 @@ router.get("/", function(req, res){
 router.get("/team", function(req, res){
     res.render("./landing/team");
 });
-<<<<<<< HEAD
-=======
 router.get("/projects", function(req, res){
     res.render("./landing/projects");
 });
->>>>>>> 02838c08139623c1f35b206f81fa44cd476cdce9
 router.get("/aeroclub", function(req, res){
     res.render("./landing/aeroclub");
 });
