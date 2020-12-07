@@ -16,6 +16,7 @@ var express     = require("express"),
     User        = require("./models/user")
     // Campground  = require("./models/campground")
 
+require("dotenv").config()
 var indexRoutes = require("./routes/index"),
     membersRoutes = require ("./routes/members")
 
@@ -62,9 +63,9 @@ app.use("/members", membersRoutes);
 
 
 
+const PORT = process.env.PORT || 3000;
 
-
-app.listen(3000, function(){
+app.listen(PORT, function(){
    console.log("The YelpCamp Server Has Started!");
 });
 

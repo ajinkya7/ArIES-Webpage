@@ -4,13 +4,14 @@
   "description": "YelpCamp v1",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js"
+    "start": "node app.js"
   },
   "author": "Colt Steele",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "express-session": "^1.17.0",
