@@ -21,7 +21,7 @@ var indexRoutes = require("./routes/index"),
     membersRoutes = require ("./routes/members")
 
 
-mongoose.connect("mongodb://localhost/ariesv1");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/ariesv1");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
